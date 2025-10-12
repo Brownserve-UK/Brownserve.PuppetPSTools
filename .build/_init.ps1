@@ -176,7 +176,7 @@ try
     }
     if (!$PSToolsPath)
     {
-        throw 'Couldn't find Brownserve.PSTools'
+        throw "Couldn't find Brownserve.PSTools"
     }
     # Convert the path so we can be OS agnostic
     $PSToolsPath = $PSToolsPath | Convert-Path
