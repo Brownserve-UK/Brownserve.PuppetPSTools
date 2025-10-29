@@ -1,4 +1,4 @@
-function New-PuppetModule
+function New-BrownservePuppetModule
 {
     <#
     .SYNOPSIS
@@ -22,12 +22,12 @@ function New-PuppetModule
         The path where the module should be created. Defaults to the current working directory.
 
     .EXAMPLE
-        New-PuppetModule -Name 'mymodule' -Description 'My custom module' -ModuleType 'Private'
+        New-BrownservePuppetModule -Name 'myModule' -Description 'My custom module' -ModuleType 'Private'
 
         Creates a new private Puppet module in the current directory.
 
     .EXAMPLE
-        New-PuppetModule -Name 'mymodule' -Description 'My custom module' -ModuleType 'Private' -Path '/etc/puppetlabs/code/environments/production/modules'
+        New-BrownservePuppetModule -Name 'myModule' -Description 'My custom module' -ModuleType 'Private' -Path '/etc/puppetlabs/code/environments/production/modules'
 
         Creates a new private Puppet module in the specified path.
     #>
