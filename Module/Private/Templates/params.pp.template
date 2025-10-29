@@ -1,0 +1,10 @@
+# __MODULENAME__::params
+#
+# @api private
+#
+# @summary
+#    __DESCRIPTION__
+#
+class __MODULENAME__::params (
+) {
+}

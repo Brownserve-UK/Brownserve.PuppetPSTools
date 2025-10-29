@@ -1,0 +1,9 @@
+# __MODULENAME__::dependencies
+#
+# @summary
+#    Dependencies for __MODULENAME__
+#
+class __MODULENAME__::dependencies (
+) {
+  require __MODULENAME__::params
+}
