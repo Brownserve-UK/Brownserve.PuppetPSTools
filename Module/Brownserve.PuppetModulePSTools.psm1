@@ -6,6 +6,7 @@
     !!! MANUAL CHANGES WILL BE LOST UNLESS ADDED TO THE "user defined module steps" SECTION BELOW !!!
 #>
 #Requires -Version 6.0
+#Requires -Module Brownserve.PSTools
 
 [CmdletBinding()]
 param()
@@ -44,6 +45,24 @@ if ($Global:BrownserveCmdlets -is 'System.Array')
     $Global:BrownserveCmdlets += @{
         Module  = "$($MyInvocation.MyCommand)"
         Cmdlets = $PublicCmdlets
+    }
+}
+<#
+    Some cmdlets will need to make use of temporary files so we need somewhere to store them.
+    _If_ we're in a repository then store them in the repositories temp location, otherwise use the system temp drive.
+    (This allows us to easily get at temp files created during builds etc and means we don't have to override them in each cmdlet)
+#>
+$script:BrownserveTempLocation = (Get-PSDrive Temp).Root
+if ($Global:BrownserveRepoTempDirectory)
+{
+    # Only set the path if it's valid, we don't want to set a duff path!
+    if ((Test-Path $Global:BrownserveRepoTempDirectory))
+    {
+        $script:BrownserveTempLocation = $Global:BrownserveRepoTempDirectory
+    }
+    else
+    {
+        Write-Warning "The `$global:sBrownserveRepoTempDirectory path '$($global:BrownserveRepoTempDirectory)' does not appear to be a valid path and therefore will be ignored."
     }
 }
 
