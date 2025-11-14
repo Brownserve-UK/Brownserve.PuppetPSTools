@@ -3,7 +3,7 @@
 # @api private
 #
 # @summary
-#    __DESCRIPTION__
+#    Private class featuring parameters for __MODULENAME__
 #
 class __MODULENAME__::params (
 ) {
