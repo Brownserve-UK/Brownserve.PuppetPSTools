@@ -1,0 +1,9 @@
+{
+  "Name": "Brownserve.PuppetPSTools",
+  "Description": "Tooling used for interacting with Puppet",
+  "GUID": "18042030-cf30-4f74-bfc4-c1ca603865a7",
+  "Tags": [
+    "puppet",
+    "Brownserve-UK"
+  ]
+}
