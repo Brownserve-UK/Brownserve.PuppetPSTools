@@ -10,4 +10,10 @@ paket-files/
 # The temporary directory is used to store build output, log files, redirected output etc. It is recreated by the _init.ps1 script.
 .tmp/
 
+# AI coding tool directories contain local/personal configuration and session data that should not be committed.
+.claude/
+.cursor/
+.aider*
+.continue/
+
 ## Manually defined ignores: ##

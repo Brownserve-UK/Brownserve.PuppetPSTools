@@ -12,7 +12,8 @@
         "streetsidesoftware.code-spell-checker",
         "ms-vscode.powershell",
         "yzhang.markdown-all-in-one",
-        "EditorConfig.EditorConfig"
+        "EditorConfig.EditorConfig",
+        "DavidAnson.vscode-markdownlint"
       ],
       "settings": {}
     }

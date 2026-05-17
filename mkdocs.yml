@@ -1,0 +1,39 @@
+site_name: Brownserve.PuppetPSTools
+site_url: https://docs.brownserve.co.uk/Brownserve.PuppetPSTools/
+repo_url: https://github.com/Brownserve-UK/Brownserve.PuppetPSTools
+repo_name: Brownserve-UK/Brownserve.PuppetPSTools
+docs_dir: pages
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.code.copy
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - awesome-pages
+
+nav:
+  - Home: index.md
+  - Module Reference:
+    - Overview: reference/Brownserve.PuppetPSTools.md
+    - ...
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - admonition
+  - toc:
+      permalink: true
